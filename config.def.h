@@ -45,7 +45,7 @@ static const char unknown_str[] = "n/a";
  * ram_total           total memory size in GB         NULL
  * ram_used            used memory in GB               NULL
  * run_command         custom shell command            command (echo foo)
- * separator           string to echo                  NULL
+ * separator           string toecho                  NULL
  * swap_free           free swap in GB                 NULL
  * swap_perc           swap usage in percent           NULL
  * swap_total          total swap size in GB           NULL
@@ -65,8 +65,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ vol_perc, "[VOL %s]  ", 	"/dev/mixer1"},
-	{ battery_perc, "[BAT  %s%%]  ", "BAT0"	},
-	{ ram_perc, "[RAM  %s%%]  ", NULL	},
-	{ cpu_perc, "[CPU  %s%%]  ", NULL	},
+	{ vol_perc, "| VOL   %s|  ", 	"/dev/mixer"},
+	{ battery_perc, "| BAT   %s%%|  ", "BAT0"	},
+	{ ram_perc, "|RAM   %s%%|  ", NULL	},
+	{ cpu_perc, "|CPU   %s%%|  ", NULL	},
 };
