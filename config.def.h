@@ -65,9 +65,12 @@ static const char unknown_str[] = "nil";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+	/* Enable datetime when using desktop */
 	{ netspeed_rx, "( NET: %sB/s | ", 	"wlp3s0"},
 	{ run_command, "VOL:%4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
 	{ battery_perc, "BAT: %s%% | ", "BAT0"	},
 	{ ram_perc, "RAM: %s%% | ", NULL	},
-	{ cpu_perc, "CPU: %s%% ", NULL	}
+	{ cpu_perc, "CPU: %s%% ", NULL	},
+	/* battery_perc, / %s%% | , BAT1 <--  For Thinkpad Ultrabay battery */
+	/* datetime TIME: %s %a %b %d %r */
 };
